@@ -5,6 +5,8 @@ def check_permutation(str1, str2):
         return False
 
     #My idea is to keep a hash/dictionary of a count of all characters in each string and the compare
+
+    #I think this would be 0(2N) since it would iterate through each string
     str1dict = make_dict(str1)
     str2dict = make_dict(str2)
     if str1dict != str2dict:
