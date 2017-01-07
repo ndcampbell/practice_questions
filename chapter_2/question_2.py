@@ -20,11 +20,12 @@ def kth_last(head, k):
 knode = None
 def recurs_k(node, k):
     global knode
-    if node.nextn == None:
+    if node == None:
         return 0
-    end = recurs_k(node.nextn, k)
-    if end == k:
+    counter = recurs_k(node.nextn, k) + 1
+    if counter == k:
         knode = node
+    return counter
 
 if __name__ == "__main__":
     ll = linkedlist.LinkedList()
@@ -36,3 +37,5 @@ if __name__ == "__main__":
     ll.print_all()
     foundnode = kth_last(ll.head, 2)
     print(foundnode.data)
+    recurs_k(ll.head, 3)
+    print(knode.data)
