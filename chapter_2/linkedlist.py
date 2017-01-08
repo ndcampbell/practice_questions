@@ -2,6 +2,13 @@ class LinkedList():
     def __init__(self, head=None):
         self.head = head
 
+    def insert_node(self, node):
+        if self.head == None:
+            self.head = node
+        else:
+            node.nextn = self.head
+            self.head = node
+
     def insert(self, data):
         node = Node(data)
         if self.head == None:
