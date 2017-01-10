@@ -42,7 +42,8 @@ class Stack(LinkedList):
 
     def pop(self):
         old = self.head
-        self.head = self.head.nextn
+        if self.head != None:
+            self.head = self.head.nextn
         return old
 
 class Queue(LinkedList):
